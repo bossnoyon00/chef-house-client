@@ -7,11 +7,11 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/solid'
 import { AuthContext } from '../../providers/AuthProvider';
-import { Result } from 'postcss';
 
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleLogOut = () => {
@@ -68,11 +68,10 @@ const Header = () => {
                             }
                         </li>
                         <li>
-                            <Link
-                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                            >
-                                <button style={{ backgroundColor: 'rgba(126, 144, 254, 1)' }} className='btn btn-primary text-white p-3 rounded'>PROFILE</button>
-                            </Link>
+                            {user ?
+                                <img className='w-10 rounded' src={user.photoURL} alt="" /> : ''
+
+                            }
                         </li>
                     </ul>
                     {/* Mobile Navbar Section */}

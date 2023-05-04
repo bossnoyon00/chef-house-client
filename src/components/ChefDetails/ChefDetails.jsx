@@ -5,7 +5,6 @@ import Recipe from '../Recipe/Recipe';
 const ChefDetails = () => {
     // const { id } = useParams();
     const chefDetails = useLoaderData();
-    console.log(chefDetails);
     const { chef_name, description, likes, years_of_experience, number_of_recipes } = chefDetails;
     return (
         <div className=' rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>

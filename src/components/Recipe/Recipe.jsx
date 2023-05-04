@@ -1,7 +1,7 @@
 import React from 'react';
+import { FaMarker } from 'react-icons/fa';
 
 const Recipe = ({ recipe }) => {
-    console.log(recipe);
     return (
         <div className=''>
             <div className="card hover:bg-zinc-800 card-compact w-96 bg-base-100 shadow-xl text-white bg-red-400">
@@ -13,7 +13,7 @@ const Recipe = ({ recipe }) => {
                     <p>
                         Ingradients :
                         {
-                            recipe.ingredients.map((gradient, index) => <li key={index}>{gradient}</li>)
+                            recipe.ingredients.map((gradient, index) => <li key={index}> {gradient}</li>)
                         }
                     </p>
                     <div className="card-actions justify-end">

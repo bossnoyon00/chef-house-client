@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Chef = ({ chef }) => {
-    console.log(chef);
     return (
-        <div>
+        <div className='w-full'>
             <div className="card w-96 bg-base-100 shadow-xl image-full font-bold">
                 <figure><img src={chef.chef_picture} alt="Shoes" /></figure>
                 <div className="card-body">

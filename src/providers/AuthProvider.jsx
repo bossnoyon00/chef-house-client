@@ -27,15 +27,17 @@ const AuthProvider = ({ children }) => {
     }
 
     const googleSignIn = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
     const githubSignIn = () => {
+        setLoading(true);
         return signInWithPopup(auth, githubProvider)
     }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
-            console.log('logged in user inside the user', loggedUser);
+            // console.log('logged in user inside the user', loggedUser);
             setUser(loggedUser)
             setLoading(false);
         })
