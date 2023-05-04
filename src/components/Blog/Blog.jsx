@@ -6,7 +6,6 @@ const ref = React.createRef();
 
 const Blog = () => {
     return (
-
         <div>
             <div className='text-center mt-10'>
                 <Pdf targetRef={ref} filename="code-example.pdf">
@@ -14,7 +13,7 @@ const Blog = () => {
                 </Pdf>
             </div>
             <div className='rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8' ref={ref}>
-                <div tabindex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
+                <div tabIndex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
                     <div className="collapse-title text-xl font-medium">  1. Tell us the differences between uncontrolled and controlled components.</div>
                     <div className="collapse-content bg-rose-300  font-bold">
                         <p>In React, there are two ways to manage form inputs and components that have state: controlled components and uncontrolled components.
@@ -24,13 +23,13 @@ const Blog = () => {
                     </div>
                 </div>
 
-                <div tabindex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
+                <div tabIndex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
                     <div className="collapse-title text-xl font-medium">2. How to validate React props using PropTypes</div>
                     <div className="collapse-content bg-rose-300  font-bold">
                         <p>React provides a way to validate props passed to a component using a library called PropTypes. PropTypes allows you to specify the type and shape of props expected by a component, and it will generate warnings in the console if any of the props passed to the component do not match the specified type or shape.</p>
                     </div>
                 </div>
-                <div tabindex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
+                <div tabIndex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
                     <div className="collapse-title text-xl font-medium"> 3. Tell us the difference between nodejs and express js.
                     </div>
                     <div className="collapse-content bg-rose-300  font-bold">
@@ -42,7 +41,7 @@ const Blog = () => {
                         </p>
                     </div>
                 </div>
-                <div tabindex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
+                <div tabIndex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
                     <div className="collapse-title text-xl font-medium"> 4. What is a custom hook, and why will you create a custom hook?</div>
                     <div className="collapse-content bg-rose-300  font-bold">
                         <p>Custom React JS hooks are reusable functions that a React JS software developer can use to add special and unique functionality to the React applications. Usually, if there is a requirement to add a feature, one can install a third-party library and solve the problem.</p>
