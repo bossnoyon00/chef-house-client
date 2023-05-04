@@ -88,7 +88,7 @@ const Home = () => {
             </div>
 
 
-            <div className="hero min-h-screen">
+            <div className="hero bg-orange-400 rounded min-h-screen">
                 <div className="hero-content flex-col md:flex-row ">
                     <div className="text-center lg:text-left">
                         <h1 className=" text-2xl md:text-5xl font-bold">Contact now!</h1>
