@@ -20,7 +20,7 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid md:grid-cols-3 mt-40 '>
+            <div className='grid md:grid-cols-3 gap-10 mt-40 '>
                 {
                     chefDetails.recipes.map((recipe, index) => <Recipe key={index} recipe={recipe}></Recipe>)
                 }

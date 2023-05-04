@@ -17,7 +17,7 @@ const Signup = () => {
         console.log(name, email, photo, password);
 
         setError('');
-        if(password.length < 6) {
+        if (password.length < 6) {
             setError('password must be 6 characters or longer')
             return
         }
@@ -89,7 +89,7 @@ const Signup = () => {
                                 <button className="btn btn-primary">Register</button>
                             </div>
                             <div>
-                                <p><small>Already have an account? <Link to="/login">Please login</Link></small></p>
+                                <p><small>Already have an account? <Link className='font-bold text-red-400' to="/login">Please login</Link></small></p>
                             </div>
                             <p className='text-error'>{error}</p>
                         </div>

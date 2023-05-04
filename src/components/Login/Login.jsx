@@ -81,7 +81,7 @@ const Login = () => {
                                 <button onClick={handleGithubSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGithub></FaGithub></button>
                             </div>
                             <div>
-                                <p><small>New to chef house? <Link to="/signup">Create New Account</Link></small></p>
+                                <p><small>New to chef house? <Link className='text-red-400 font-bold' to="/signup">Create New Account</Link></small></p>
                             </div>
                         </div>
 
