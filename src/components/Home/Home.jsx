@@ -33,7 +33,7 @@ const Home = () => {
                     </LazyLoad>
                 </div>
             </div>
-            <div className='grid md:grid-cols-3  gap-10'>
+            <div className='grid md:grid-cols-3  gap-5'>
                 {
                     chefs.map(chef => <Chef key={chef.id} chef={chef}></Chef>)
                 }
@@ -41,8 +41,8 @@ const Home = () => {
             <div className='my-9'>
                 <h2 className='text-amber-700 text-5xl text-center'>Happy Clients</h2>
 
-                <div className=' grid md:grid-cols-3 mt-6 gap-10'>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                <div className='w-full grid md:grid-cols-3 mt-6 gap-5'>
+                    <div className="card bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Shoes" className="rounded-xl" />
                         </figure>
@@ -56,7 +56,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Shoes" className="rounded-xl" />
                         </figure>
@@ -70,7 +70,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card bg-base-100 shadow-xl">
                         <figure className="px-10 pt-10">
                             <img src="https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="Shoes" className="rounded-xl" />
                         </figure>
