@@ -8,7 +8,11 @@ const Blog = () => {
     return (
 
         <div>
-            
+            <div className='text-center mt-10'>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                    {({ toPdf }) => <button className='btn btn-primary' onClick={toPdf}>Generate Blog Pdf</button>}
+                </Pdf>
+            </div>
             <div className='rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8' ref={ref}>
                 <div tabindex="0" className="collapse collapse-arrow border border-base-300 bg-orange-400 rounded-box ">
                     <div className="collapse-title text-xl font-medium">  1. Tell us the differences between uncontrolled and controlled components.</div>
