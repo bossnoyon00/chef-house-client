@@ -112,23 +112,7 @@ const Header = () => {
                                     <nav>
                                         <ul className='space-y-4'>
 
-                                            <li>
-                                                <Link
-                                                    to='/'
-                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                                >
-                                                    Home
-                                                </Link>
-                                            </li>
-
-                                            <li>
-                                                <Link
-                                                    to='/login'
-                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                                >
-                                                    Login
-                                                </Link>
-                                            </li>
+                                         
 
                                             <li>
                                                 <Link
