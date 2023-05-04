@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Chef from '../Chef/Chef';
 import { AuthContext } from '../../providers/AuthProvider';
+import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
     const [chefs, setChefs] = useState([]);
@@ -25,7 +26,11 @@ const Home = () => {
                     <p className='text-white'>Crispy chef import form dubai.. <br />New all chef are traditional.okay this site always to be new</p>
                 </div>
                 <div className=''>
-                    <img className='w-96' src="https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="" />
+                    {/* <img className='w-96' src="https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="" /> */}
+
+                    <LazyLoad threshold={0.95} offset={300}>
+                        <img className='w-96' src='https://images.unsplash.com/photo-1630344745900-b5385f94f26c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80' />
+                    </LazyLoad>
                 </div>
             </div>
             <div className='grid md:grid-cols-3  gap-10'>

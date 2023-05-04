@@ -28,7 +28,7 @@ const Header = () => {
                     {/* Logo Section */}
                     <Link to='/' className='inline-flex items-center'>
                         <BoltIcon className='h-6 w-6 text-blue-500' />
-                        <span className='ml-2 text-orange-600 text-xl font-bold tracking-wide text-gray-800'>
+                        <span className='ml-2 text-orange-600 text-xl font-bold tracking-wide '>
                             Thailand Chef House
                         </span>
                     </Link>
@@ -138,12 +138,24 @@ const Header = () => {
                                                     Blog
                                                 </Link>
                                             </li>
+                                            <li>
+                                                {user ?
+                                                    <button onClick={handleLogOut} className='btn btn-primary'>Logout</button>
+                                                    :
+                                                    <NavLink
+                                                        to='/login'
+                                                        className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                                    >
+                                                        Login
+                                                    </NavLink>
+
+                                                }
+                                            </li>
                                             <li className=''>
-                                                <Link
-                                                    className='font-medium text-yellow-400 bg-gray-400 p-3 rounded tracking-wide  transition-colors duration-200 hover:text-blue-400'
-                                                >
-                                                    <button className='btn btn-primary'>Start Applying</button>
-                                                </Link>
+                                                {user ?
+                                                    <img title={user.displayName} className='w-10 rounded' src={user.photoURL} alt="" /> : ''
+
+                                                }
                                             </li>
                                         </ul>
                                     </nav>

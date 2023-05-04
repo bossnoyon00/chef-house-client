@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
@@ -6,6 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
     const { signIn, googleSignIn, githubSignIn, } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState('')
     const location = useLocation();
     const handleSignIn = (event) => {
         event.preventDefault()
@@ -18,9 +19,11 @@ const Login = () => {
                 console.log(loggedUser);
                 form.reset()
                 navigate(location.state?.from?.pathname || '/', { replace: true })
+                setError('')
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message)
             })
     }
     const handleGoogleSignIn = () => {
@@ -57,22 +60,24 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
+                                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <p className='text-red-500 mb-5'>{error}</p>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <div className='text-center'>
                                 <button onClick={handleGoogleSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGoogle className=''></FaGoogle></button> <br />
+
                                 <button onClick={handleGithubSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGithub></FaGithub></button>
                             </div>
                             <div>

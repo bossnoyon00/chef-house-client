@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
 const Signup = () => {
     const { createUser, logOut } = useContext(AuthContext);
+    const [error, setError] = useState('');
     const navigate = useNavigate();
     const handleRegister = (event) => {
         event.preventDefault()
@@ -14,6 +15,12 @@ const Signup = () => {
         const photo = form.photo.value;
         const password = form.password.value;
         console.log(name, email, photo, password);
+
+        setError('');
+        if(password.length < 6) {
+            setError('password must be 6 characters or longer')
+            return
+        }
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user;
@@ -26,6 +33,7 @@ const Signup = () => {
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message);
             })
     }
 
@@ -54,25 +62,25 @@ const Signup = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name='name' placeholder="name" className="input input-bordered" required/>
+                                <input type="text" name='name' placeholder="name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name='email' placeholder="email" className="input input-bordered" required/>
+                                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo Url</span>
                                 </label>
-                                <input type="text" name='photo' placeholder="photo" className="input input-bordered" required/>
+                                <input type="text" name='photo' placeholder="photo" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" required/>
+                                <input type="text" name='password' placeholder="password" className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -83,6 +91,7 @@ const Signup = () => {
                             <div>
                                 <p><small>Already have an account? <Link to="/login">Please login</Link></small></p>
                             </div>
+                            <p className='text-error'>{error}</p>
                         </div>
                     </form>
                 </div>
