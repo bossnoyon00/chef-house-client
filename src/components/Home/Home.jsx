@@ -22,7 +22,7 @@ const Home = () => {
         <div className='rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
             <div className='md:flex justify-around items-center font-bold my-14 bg-lime-500 p-10 rounded'>
                 <div>
-                    <h2 className='text-4xl text-orange-600'>Yummyy chef!! <br /> <span className='text-fuchsia-700'>Look This</span> <br /> is Crispy Chef</h2>
+                    <h2 className='text-4xl text-red-400'>Thailand Chef!! <br /> <span className='text-fuchsia-700'>Look This</span> <br /> is Crispy Chef</h2>
                     <p className='text-white'>Crispy chef import form dubai.. <br />New all chef are traditional.okay this site always to be new</p>
                 </div>
                 <div className=''>

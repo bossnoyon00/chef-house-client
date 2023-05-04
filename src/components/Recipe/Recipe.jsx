@@ -12,9 +12,9 @@ const Recipe = ({ recipe }) => {
     };
 
     return (
-        <div className=''>
+        <div className='w-full'>
             <ToastContainer></ToastContainer>
-            <div className="card hover:bg-zinc-800 card-compact w-96 bg-base-100 shadow-xl text-white bg-red-400">
+            <div className="card hover:bg-zinc-800 card-compact sm:mb-4 bg-base-100 shadow-xl text-white bg-red-400">
                 <figure><img src="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{recipe.name}</h2>
