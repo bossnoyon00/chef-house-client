@@ -12,7 +12,7 @@ const Chef = ({ chef }) => {
                         <img src={chef.chef_picture} />
                     </LazyLoad>
                 </figure>
-                {/* <div className="card-body">
+                <div className="card-body">
                     <h2 className="card-title text-orange-700">Chef name : {chef.chef_name}</h2>
                     <p>Experience:{chef.years_of_experience
                     }</p>
@@ -21,7 +21,7 @@ const Chef = ({ chef }) => {
                     <div className="card-actions justify-end">
                         <Link to={`/chef/${chef.id}`}> <button className="btn btn-primary">View Recipes</button></Link>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
