@@ -28,8 +28,8 @@ const Header = () => {
                     {/* Logo Section */}
                     <Link to='/' className='inline-flex items-center'>
                         <BoltIcon className='h-6 w-6 text-blue-500' />
-                        <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-                            Chef House
+                        <span className='ml-2 text-orange-600 text-xl font-bold tracking-wide text-gray-800'>
+                            Thailand Chef House
                         </span>
                     </Link>
 
@@ -69,7 +69,7 @@ const Header = () => {
                         </li>
                         <li>
                             {user ?
-                                <img className='w-10 rounded' src={user.photoURL} alt="" /> : ''
+                                <img title={user.displayName} className='w-10 rounded' src={user.photoURL} alt="" /> : ''
 
                             }
                         </li>

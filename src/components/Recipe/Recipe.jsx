@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaMarker } from 'react-icons/fa';
 
 const Recipe = ({ recipe }) => {
+    const [isDisabled, setIsDisabled] = useState(false);
+
+    const handleDisabled = () => {
+        setIsDisabled(true);
+    };
+
     return (
         <div className=''>
             <div className="card hover:bg-zinc-800 card-compact w-96 bg-base-100 shadow-xl text-white bg-red-400">
@@ -17,7 +23,7 @@ const Recipe = ({ recipe }) => {
                         }
                     </p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Favorite</button>
+                        <button onClick={handleDisabled} disabled={isDisabled} className="btn btn-primary">Favorite</button>
                     </div>
                 </div>
             </div>
