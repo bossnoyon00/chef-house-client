@@ -88,18 +88,11 @@ const Home = () => {
             </div>
 
 
-            {/* <div className="hero min-h-screen">
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col md:flex-row ">
                     <div className="text-center lg:text-left">
                         <h1 className=" text-2xl md:text-5xl font-bold">Contact now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi <br /> exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <div className="w-full  text-center md:text-left">
-
-
-                            <p className="my-3 text-black text-sm">Email: info@example.com</p>
-                            <p className="my-3 text-black text-sm">Phone: 123-321-5555</p>
-                            <p className="my-3 text-black text-sm">Address: road-123,house-3/2, Gulshan , Dhaka-1212</p>
-                        </div>
+                        <p className="my-3 text-black text-sm">Address: road-123,house-3/2, Gulshan , Dhaka-1212</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
@@ -125,7 +118,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };
